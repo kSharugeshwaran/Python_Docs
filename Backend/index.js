@@ -7,11 +7,13 @@ const PORT = 3000;
 const connectDatabase = require('./Config/Config.js');
 const errorHandler = require("./Middleware/ErrorHandler.js");
 const UserRouter = require("./Routes/UserRouter.js");
+const CommunityRouter = require("./Routes/CommunityRouter.js");
 
 app.use(errorHandler);
 app.use(cors());
 app.use(express.json());
 app.use("/docs",UserRouter)
+app.use("/docs",CommunityRouter)
 
 
 app.get("/", (req, res) => {
