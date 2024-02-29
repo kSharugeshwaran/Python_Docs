@@ -13,6 +13,10 @@
   
 3. *Collaboration Features:*
    - Integrate comment sections for discussions.
+  
+
+### Solution:
+Redesigning the Python Documentations and making it easier for the users to access and contribute easily with a User Friendly Design.
 
 ## Flow Chart
 
