@@ -19,7 +19,7 @@ const createUser = async (req,res)=>{
             res.send(error.details)
         }
         const user = await userModel.create(value);
-        res.status(201).json(data);
+        res.status(201).json(user);
     }catch{
         console.error("Error Creating user:", error);
         res.status(500).send("Internal server error");
