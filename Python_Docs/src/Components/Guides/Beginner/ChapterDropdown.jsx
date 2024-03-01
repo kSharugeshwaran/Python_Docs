@@ -59,9 +59,9 @@ const ChapterDropdown = ({ Chapter, topicList }) => {
                     {({ isExpanded }) => (
                         <>
                             <h2>
-                                <AccordionButton _hover={{borderColor:"#FFCB1E"}} _focus={{outline:"#FFCB1E"}}>
+                                <AccordionButton _hover={{ borderColor: "#FFCB1E" }} _focus={{ outline: "#FFCB1E" }}>
                                     <Box as="span" flex='1' textAlign='left'>
-                                        <Heading className='dropdowns'>{Chapter}</Heading>
+                                        <Heading className='dropdowns' fontSize={"2xl"}>{Chapter}</Heading>
                                     </Box>
                                     {isExpanded ? (
                                         <MinusIcon fontSize='12px' />
@@ -73,17 +73,21 @@ const ChapterDropdown = ({ Chapter, topicList }) => {
                             <AccordionPanel pb={4}>
                                 {
                                     topicList.map((topic, id) => {
-                                        if(Chapter == "Introduction"){
+                                        if (Chapter == "Introduction") {
+                                            // #283c52
                                             return (
                                                 <Box p={3} fontSize={18} ml={8} >
-                                                    <Link key={id} to={`Introduction/${id + 1}`}>{topic}</Link>
+                                                    <Link key={id} to={`Introduction/${id + 1}`} _hover={{ color: "#283c52" }} >{topic}</Link>
                                                 </Box>
                                             )
-                                        }else{
+                                        } else {
                                             return (
-                                                <Box p={3} fontSize={18} ml={8} >
-                                                    <Link key={id} to={`02/${id + 1}`}>{topic}</Link>
-                                                </Box>)
+                                                <Link key={id} to={`02/${id + 1}`} >
+                                                    <Box p={3} fontSize={18} ml={8} className='links' borderRadius={"md"}>
+                                                        {topic}
+                                                    </Box>
+                                                </Link>
+                                            )
                                         }
 
 
