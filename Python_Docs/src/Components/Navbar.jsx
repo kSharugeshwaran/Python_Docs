@@ -24,6 +24,8 @@ import { FiMenu } from "react-icons/fi";
 import { RiFlashlightFill } from "react-icons/ri";
 import { FiBookOpen } from "react-icons/fi";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import LogoutButton from "./auth/LogoutButton";
+import LoginButton from "./auth/LoginButton";
 
 export default function Index() {
   const { isOpen, onClose, onOpen } = useDisclosure();
@@ -126,8 +128,17 @@ const SidebarContent = ({ ...props }) => (
           color: useColorModeValue("#011627", "gray.900"),
         }}
       >
-        {" "}
-        LOG OUT
+        <LoginButton />
+      </Button>
+      <Button
+        bg={useColorModeValue("#011627")}
+        color={useColorModeValue("white", "gray.900")}
+        _hover={{
+          bg: useColorModeValue("#FFCB1E", "gray.900"),
+          color: useColorModeValue("#011627", "gray.900"),
+        }}
+      >
+        <LogoutButton />
       </Button>
     </Flex>
   </Box>
