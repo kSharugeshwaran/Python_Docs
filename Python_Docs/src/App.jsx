@@ -5,6 +5,7 @@ import Index from "./Components/Navbar";
 import Cards from "./Components/Cards";
 import Guide from "./Components/Guide";
 import AllRoutes from "./AllRoutes/AllRoutes";
+
 function App() {
   return (
     <>
@@ -12,7 +13,8 @@ function App() {
         {/* <Index /> */}
         {/* <Cards /> */}
         {/* <Guide /> */}
-        <AllRoutes/>
+        {/* <AllRoutes/> */}
+        <Faq/>
       </ChakraProvider>
     </>
   );
