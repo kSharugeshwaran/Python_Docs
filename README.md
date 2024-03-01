@@ -21,7 +21,7 @@ Redesigning the Python Documentations and making it easier for the users to acce
 ### SCREENS:
 
 ## LANDING PAGE
-![TV - 1](https://github.com/kSharugeshwaran/Python_Docs/assets/142793019/1729a4f8-634e-473a-af33-ca03dde73401)
+![TV - 1 (1)](https://github.com/kSharugeshwaran/Python_Docs/assets/142793019/76b10601-9bea-4445-bd15-c2b66f5224bc)
 
 ## HOME PAGE DASHBOARD
 ![TV - 3](https://github.com/kSharugeshwaran/Python_Docs/assets/142793019/6063c665-3d18-4915-8503-3d49c1763824)
