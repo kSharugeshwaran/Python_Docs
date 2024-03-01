@@ -4,13 +4,15 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Index from "./Components/Navbar";
 import Cards from "./Components/Cards";
 import Guide from "./Components/Guide";
+import AllRoutes from "./AllRoutes/AllRoutes";
 function App() {
   return (
     <>
       <ChakraProvider>
-        <Index />
+        {/* <Index /> */}
         {/* <Cards /> */}
-        <Guide />
+        {/* <Guide /> */}
+        <AllRoutes/>
       </ChakraProvider>
     </>
   );
