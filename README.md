@@ -35,6 +35,10 @@ Redesigning the Python Documentations and making it easier for the users to acce
 ## LEARNING UNITS
 ![TV - 9](https://github.com/kSharugeshwaran/Python_Docs/assets/142793019/40aff61a-e06d-4cfa-a6fa-16ab363dca63)
 
+## INTEGRATED DEVELOPMENT ENVIRONMETN
+![TV - 5](https://github.com/kSharugeshwaran/Python_Docs/assets/142793019/bd4d6db7-6b55-4ee5-8259-451e0067d90c)
+
+
 ## Flow Chart
 
 ![](<WhatsApp Image 2024-02-29 at 23.46.34_bd4be9ef.jpg>)
