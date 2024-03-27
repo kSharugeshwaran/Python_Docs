@@ -26,9 +26,15 @@ import { FiBookOpen } from "react-icons/fi";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import LogoutButton from "./auth/LogoutButton";
 import LoginButton from "./auth/LoginButton";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Index() {
   const { isOpen, onClose, onOpen } = useDisclosure();
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
 
   return (
     <Box className="box">
@@ -59,16 +65,34 @@ export default function Index() {
             size="md"
           />
 
-          <Flex align="center">
-            <Icon color="gray.500" as={FaBell} cursor="pointer" />
-            <Avatar
-              ml="4"
-              size="sm"
-              name="Ahmad"
-              src="https://avatars2.githubusercontent.com/u/37842853?v=4"
-              cursor="pointer"
-            />
-          </Flex>
+          {isAuthenticated && (
+            <Flex align="center">
+              <Icon color="gray.500" as={FaBell} cursor="pointer" />
+              <Avatar
+                ml="4"
+                size="sm"
+                name={user.name}
+                src={user.picture}
+                alt={user.name}
+                cursor="pointer"
+              />
+            </Flex>
+          )}
+
+          {!isAuthenticated && (
+            <Center>
+              <Button
+                bg={useColorModeValue("#011627")}
+                color={useColorModeValue("white", "gray.900")}
+                _hover={{
+                  bg: useColorModeValue("#FFCB1E", "gray.900"),
+                  color: useColorModeValue("#011627", "gray.900"),
+                }}
+              >
+                <LoginButton />
+              </Button>
+            </Center>
+          )}
         </Flex>
       </Box>
     </Box>
@@ -120,16 +144,6 @@ const SidebarContent = ({ ...props }) => (
       py="55"
       gap={5}
     >
-      <Button
-        bg={useColorModeValue("#011627")}
-        color={useColorModeValue("white", "gray.900")}
-        _hover={{
-          bg: useColorModeValue("#FFCB1E", "gray.900"),
-          color: useColorModeValue("#011627", "gray.900"),
-        }}
-      >
-        <LoginButton />
-      </Button>
       <Button
         bg={useColorModeValue("#011627")}
         color={useColorModeValue("white", "gray.900")}
